@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:orientation="vertical">
+
+    <!--
+        TODO : 내 프로필 일때와 상대 프로필 일때 구별해야됨
+    -->
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_weight=".20"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:srcCompat="@drawable/cat"/>
+
+        <LinearLayout
+            android:layout_weight=".40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100만"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="팔로워"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight=".40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="77"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="팔로잉"
+                android:textSize="15dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--
+        TODO : 버튼 구성 변경
+    -->
+
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight=".33"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="팔로워"/>
+
+        <Button
+            android:layout_weight=".33"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="메시지"/>
+
+        <Button
+            android:layout_weight=".33"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="수정하기"/>
+    </LinearLayout>
+
+    <!--
+        TODO : 프로필에 보여지는 정 디자인 수정
+    -->
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="이름: "
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="루루"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="나이: "
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="만 2세"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="품종: "
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="먼치킨"
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지역: "
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ? "
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="소개: "
+                android:textSize="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="매우 귀여운 고양이입니다."
+                android:textStyle="bold"
+                android:textSize="15dp"/>
+        </LinearLayout>
+   </LinearLayout>
+
+    <!--
+        TODO: 게시물을 보여줄지, 위치 정보를 띄울지 고민!
+    -->
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_weight=".10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_weight=".20"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="카테고리"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_weight=".60"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_weight=".10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="글쓴이"
+                android:gravity="center"/>
+        </LinearLayout>
+        <View
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="1px"/>
+
+        <!--
+            TODO : 게시물을 보여준다면 ListView로 게시물 보여줌
+                    or 내 위치 지도를 보여
+        -->
+    </LinearLayout>
+</LinearLayout>

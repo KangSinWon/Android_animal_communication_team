@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+
+    <!--
+        TODO : 원하는 지역 클릭시 그 지역에 등록된 리스트를 보여줌
+    -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/region"
+            android:layout_weight=".35"/>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:background="#000000"/>
+
+        <ListView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:entries="@array/seoul"
+            android:layout_weight=".65"/>
+    </LinearLayout>
+</LinearLayout>
