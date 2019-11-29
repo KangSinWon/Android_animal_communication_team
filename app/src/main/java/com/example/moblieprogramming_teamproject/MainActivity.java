@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.button_db_conn:
-                intent = new Intent(this, DbConn.class);
+                intent = new Intent(this, DBSearchActivity.class);
                 startActivity(intent);
                 break;
         }

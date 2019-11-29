@@ -16,8 +16,12 @@ import java.net.URL;
  */
 
 class DBManager extends AsyncTask<String, Void, String> {
+    private final String IP_ADDRESS = "210.115.48.93:8888";
+    private final String insertServerUrl = "http://" + IP_ADDRESS + "/insert.php";
+    private final String searchServerUrl = "http://" + IP_ADDRESS + "/search.php";
+
     // TODO : 사용자 프로필 리스트를 가져오는 메소드
-    protected void loadProfileList() {
+    protected void loadProfileList(String bigarea, String smallarea) {
 
     }
 
@@ -38,28 +42,32 @@ class DBManager extends AsyncTask<String, Void, String> {
 
     // TODO : insert 이미지 추가
     protected void insertDBInfo(String... params) {
-        String name = (String)params[1];
-        String age = (String)params[2];
-        String kind = (String)params[3];
-        String area = (String)params[4];
-        String intro = (String)params[5];
+        String image = (String) params[0];
+        String name = (String) params[1];
+        String age = (String) params[2];
+        String kind = (String) params[3];
+        String gender = (String) params[4];
+        String bigarea = (String) params[5];
+        String smallarea = (String) params[6];
+        String info = (String) params[7];
 
         String postParameters = "name=" + name + "&age=" + age +
-                "&kind" + kind + "&area" + area + "&intro" + intro;
+                "&kind=" + kind + "&gender=" + gender + "&bigarea=" + bigarea + "&smallarea=" + smallarea + "&info=" + info + "&image=" + image;
 
-        execute((String)params[0], postParameters);
+        Log.i("Post Parameters", postParameters);
+
+        execute(postParameters);
     }
 
 
     @Override
     protected String doInBackground(String... params) {
-        String serverUrl = (String) params[0];
-        String postParameters = (String) params[1];
+        String postParameters = (String) params[0];
 
         // TODO : insert.php에 저장할 정보 추가
         try {
             // 2. HttpURLConnection 클래스를 사용하여 POST 방식으로 데이터를 전송합니다.
-            URL url = new URL((String)params[0]); // 주소가 저장된 변수를 이곳에 입력합니다.
+            URL url = new URL(insertServerUrl); // 주소가 저장된 변수를 이곳에 입력합니다.
 
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             httpURLConnection.setReadTimeout(5000); //5초안에 응답이 오지 않으면 예외가 발생합니다.

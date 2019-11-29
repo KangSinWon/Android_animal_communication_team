@@ -11,55 +11,64 @@
     데이터베이스 연결 test xml
     -->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="이름"/>
+    <!-- TODO : 이미지 저장 추가-->
+    <ImageView
+        android:id="@+id/imageview_pet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:srcCompat="@drawable/cat"/>
+
+    <!-- varchar -->
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_name" />
+        android:id="@+id/editText_name"
+        android:text="루루"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="나이"/>
+    <!-- int -->
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTExt_age" />
+        android:id="@+id/editTExt_age"
+        android:text="만 4세"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="품종"/>
+    <!-- varchar -->
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_kind" />
+        android:id="@+id/editText_kind"
+        android:text="고양이"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="지역"/>
+    <!-- varchar -->
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_area" />
+        android:id="@+id/editText_gender"
+        android:text="남자"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="소개"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_intro" />
+        android:id="@+id/editText_bigarea"
+        android:text="강원도"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_area"
+        android:text="춘천시"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_info"
+        android:text="활발합니다."/>
 
     <Button
         android:layout_width="match_parent"
